@@ -1,0 +1,8 @@
+{
+  "name": "CRUD-Firebase",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue",
+  "id": "1fb146f8"
+}
