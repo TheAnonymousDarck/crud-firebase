@@ -1,11 +1,22 @@
+import EditContactModal from '@/components/EditContactModal.vue';
+import Tab1Page from '@/views/Tab1Page.vue';
+import Tab2Page from '@/views/Tab2Page.vue';
+import Tab3Page from '@/views/Tab3Page.vue';
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import TabsPage from '../views/TabsPage.vue'
+
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     redirect: '/tabs/tab1'
+  },
+  {
+      path: '/edit/:contactId',
+      name:'editcontact',
+      props: true,
+      component: EditContactModal
   },
   {
     path: '/tabs/',
@@ -17,15 +28,15 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'tab1',
-        component: () => import('@/views/Tab1Page.vue')
+        component: Tab1Page
       },
       {
         path: 'tab2',
-        component: () => import('@/views/Tab2Page.vue')
+        component: Tab2Page
       },
       {
         path: 'tab3',
-        component: () => import('@/views/Tab3Page.vue')
+        component: Tab3Page
       }
     ]
   }
